@@ -1,0 +1,88 @@
+.gridMaterialUi TextField {
+  background-color: white;
+}
+.textFeild {
+  /* border-radius: 20px; */
+  /* border: 1px solid #fff; */
+  /* background: rgba(217, 217, 217, 0.24); */
+  color: wheat;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 10px;
+  width: 50%;
+}
+.contactForm input {
+  margin: 10px 5px;
+  height: 5vh;
+}
+.contactForm label {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.buttonSubmit {
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.followtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.followDiv {
+  width: 40%;
+  margin-left: 10vw;
+}
+.iconDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+}
+.iconDiv li {
+  color: white;
+}
+.contactMainDiv {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 700px) {
+  .contactMainDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .followDiv {
+    width: 100%;
+    margin-left: 0vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+  }
+  .contactForm {
+    width: 80%;
+  }
+  .contactForm label {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,22 @@
+.buttonProjectframe :focus-visible {
+  outline: 0px;
+}
+.iframeClass {
+  margin: 5px 5px;
+  width: calc(33.33% - 10px);
+  /* background-color: aliceblue; */
+  /* padding: 5px 10px; */
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .iframeClass {
+    padding: 5px 5px;
+    width: 95%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 2px;
+  }
+}

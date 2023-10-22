@@ -1,0 +1,14 @@
+.sliderClass {
+  /* color: "white",
+    backgroundColor: "white",
+    height: "20vh", */
+  color: white;
+  background-color: white;
+  height: 15vh;
+}
+
+@media screen and (max-width: 600px) {
+  .sliderClass {
+    height: 14vh;
+  }
+}

@@ -1,0 +1,32 @@
+.serviceH2 {
+  color: #fcf8f8;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+.eclipse {
+  height: 120px;
+  width: 200px;
+  margin-right: -100px;
+}
+.headingMainDiv {
+  /* margin: "0px",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center", */
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media screen and (max-width: 400px) {
+  .eclipse {
+    height: 80px;
+    width: 130px;
+    margin-right: -70px;
+  }
+}

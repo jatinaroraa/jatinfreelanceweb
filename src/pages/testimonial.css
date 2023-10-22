@@ -1,0 +1,34 @@
+.pTag {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 810px;
+
+  margin: 0;
+}
+.testimonialCard {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+@media screen and (max-width: 400px) {
+  .pTag {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 80%;
+
+    margin: 0;
+  }
+  .testimonialsDiv {
+    margin-top: 30px;
+  }
+}

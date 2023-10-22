@@ -1,0 +1,76 @@
+.navLi {
+  /* margin-left: 20px; */
+  list-style-type: none;
+  color: #fdf7f7;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.logoText {
+  color: #bc93cf;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.navLayout {
+  display: inline-flex;
+  align-items: center;
+  gap: 265px;
+}
+.navBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.navBarLinkList {
+  /* display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  width: "40%",
+
+  alignContent: "center",
+  textAlign: "center",
+  alignItems: "center", */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .navBarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navBarLinkListInner {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #bc93cf;
+    height: 100vh;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; */
+  }
+  .navBarLinkListInner a {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 10px 5px;
+  }
+}

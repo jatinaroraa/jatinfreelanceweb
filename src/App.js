@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import NavBar from "./pages/navBar";
+import Home from "./pages/home";
+import Services from "./pages/Services";
+import Projects from "./pages/projects";
+import Testimonials from "./pages/testimonials";
+import Contactus from "./pages/contactus";
+import { useEffect, useRef } from "react";
+import Aos from "aos";
+import { NavBar2 } from "./pages/Navbar2";
+import BrandsSlider from "./pages/brandsSlider";
 
 function App() {
+  const ref = useRef(null);
+  useEffect(() => {
+    Aos.init();
+  }, []);
+  const handleScroll = (id) => {
+    console.log("hititi");
+    // ref.current?.scrollIntoView({ behavior: "smooth" });
+    let section = document.getElementById(id);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        backgroundColor: "black",
+        height: "100%",
+        paddingBottom: "50px",
+      }}
+    >
+      {/* <NavBar handleScroll={handleScroll} /> */}
+      <NavBar2 />
+      <Home />
+      <BrandsSlider />
+      <Services />
+      <Projects />
+      <Testimonials />
+      <Contactus />
     </div>
   );
 }

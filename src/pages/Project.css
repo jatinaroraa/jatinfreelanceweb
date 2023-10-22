@@ -1,0 +1,14 @@
+.projectListFrameDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+@media screen and (max-width: 600px) {
+  .projectListFrameDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+  }
+}

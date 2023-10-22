@@ -1,0 +1,31 @@
+.serviceH2 {
+  color: #fcf8f8;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+.eclipse {
+  height: 120px;
+  width: 200px;
+  margin-right: -100px;
+}
+.serviceCardDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .serviceCardDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}

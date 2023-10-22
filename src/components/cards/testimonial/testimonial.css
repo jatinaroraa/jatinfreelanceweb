@@ -1,0 +1,86 @@
+.imageTag {
+  height: 130px;
+  width: 130px;
+  border-radius: 100px;
+  /* fill: url("../../../assets/profile.png") no-repeat; */
+  stroke-width: 7.924px;
+  stroke: #fff;
+  /* background-color: #fff; */
+  margin-top: -160px;
+  border: 5px solid white;
+}
+.mainDiv {
+  border-radius: 20px;
+  background: rgba(217, 217, 217, 0.24);
+  width: 757px;
+  height: 321px;
+  flex-shrink: 0;
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-color: #bc93cf; */
+  border: 0.4px solid #bc93cf;
+  padding: 2px 10px;
+}
+
+.headingsStyle h2 {
+  color: #bc93cf;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0px;
+}
+.headingsStyle p {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0px;
+}
+.description {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 70px;
+}
+@media screen and (max-width: 400px) {
+  .description {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    width: 30%;
+    height: 50%;
+  }
+  .mainDiv {
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.24);
+    width: 757px;
+    height: 321px;
+    flex-shrink: 0;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-content: space-between; */
+    /* border-color: #bc93cf; */
+    border: 0.4px solid #bc93cf;
+    padding: 2px 10px;
+  }
+}
