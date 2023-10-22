@@ -196,6 +196,7 @@
     height: 40px;
     padding: 5px 12px;
     text-align: left;
+    font-size: 16px;
   }
   .letsConnect {
     font-size: 24px;
@@ -204,6 +205,6 @@
     /* background-color: red; */
     /* width: fit-content; */
     text-align: center;
-    margin-top: -8px;
+    margin-top: -4px;
   }
 }
