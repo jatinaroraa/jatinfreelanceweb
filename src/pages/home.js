@@ -28,7 +28,13 @@ export default function Home() {
         <div className="topButtonDiv">
           <Button className="hireMeButtonTop">Hire Me</Button>
         </div>
-        <p className="description"> here is description </p>
+        <p className="descriptionHome">
+          {" "}
+          I merge design and functionality. With expertise in web and mobile
+          development, I create user-friendly websites and feature-rich mobile
+          apps to realize your vision.{" "}
+          <p className="letsConnect">Lets Connect</p>
+        </p>
         <Button className="hireMeButton">Hire Me</Button>
       </div>
 

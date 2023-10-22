@@ -10,7 +10,11 @@
 .topButtonDiv {
   display: none;
 }
-
+.letsConnect {
+  font-size: 24px;
+  font-weight: 700;
+  color: #bc93cf;
+}
 .sectionText {
   width: 611px;
   height: 453px;
@@ -35,13 +39,14 @@
   margin: 0px;
 }
 
-.description {
+.descriptionHome {
   color: #fff;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
+  text-align: left;
 }
 .hireMeButton {
   border-radius: 20px;
@@ -119,6 +124,11 @@
   .sectionText p {
     text-align: center;
   }
+  .descriptionHome {
+    height: 40px;
+    padding: 5px 12px;
+    text-align: left !important;
+  }
 }
 @media screen and (max-width: 400px) {
   .sectionText {
@@ -131,9 +141,7 @@
     margin-top: -10vh;
     margin-bottom: 10vh;
   }
-  .sectionText p {
-    text-align: center;
-  }
+
   .topButtonDiv {
     display: flex;
     flex-direction: row;
@@ -184,7 +192,18 @@
     line-height: normal;
     margin: 0px;
   }
-  .description {
+  .descriptionHome {
     height: 40px;
+    padding: 5px 12px;
+    text-align: left;
+  }
+  .letsConnect {
+    font-size: 24px;
+    font-weight: 700;
+    color: #bc93cf;
+    /* background-color: red; */
+    /* width: fit-content; */
+    text-align: center;
+    margin-top: -12px;
   }
 }
