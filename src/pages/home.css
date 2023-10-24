@@ -125,7 +125,7 @@
   margin-top: 15px;
   width: 100%;
 }
-@media screen and (max-width: 700px) and (min-width: 400px) {
+@media screen and (max-width: 700px) and (min-width: 500px) {
   .mainHomeDiv {
     display: flex;
     flex-direction: column;
@@ -133,7 +133,7 @@
     padding-left: 0vw;
   }
   .profilePic {
-    top: -50%;
+    top: -30%;
     margin-left: -420px;
     /* left: 0; */
   }
@@ -183,7 +183,21 @@
     margin-top: -10vh;
     margin-bottom: 10vh;
   }
-
+  .mainHomeDiv {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    padding-left: 0vw;
+  }
+  .profilePic {
+    top: -50%;
+    margin-left: -420px;
+    /* left: 0; */
+  }
+  .profileDiv {
+    width: 916px;
+    height: 495px;
+  }
   .topButtonDiv {
     display: flex;
     flex-direction: row;
@@ -262,10 +276,25 @@
     margin-top: -10vh;
     margin-bottom: 10vh;
   }
+  .mainHomeDiv {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    padding-left: 0vw;
+  }
   .profilePic {
+    top: -50%;
+    margin-left: -420px;
+    /* left: 0; */
+  }
+  .profileDiv {
+    width: 916px;
+    height: 495px;
+  }
+  /* .profilePic {
     width: 600px;
     margin-left: -490px;
-  }
+  } */
   .topButtonDiv {
     display: flex;
     flex-direction: row;
