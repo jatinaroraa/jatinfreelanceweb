@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jatinfreelanceweb/static/css/main.01259234.css",
+    "main.css": "/jatinfreelanceweb/static/css/main.6fcb609c.css",
     "main.js": "/jatinfreelanceweb/static/js/main.e3d869f0.js",
     "static/js/787.6f5313be.chunk.js": "/jatinfreelanceweb/static/js/787.6f5313be.chunk.js",
     "static/media/profileHd.png": "/jatinfreelanceweb/static/media/profileHd.fdb95798ca2003573f17.png",
@@ -16,12 +16,12 @@
     "static/media/gendomilanologo.avif": "/jatinfreelanceweb/static/media/gendomilanologo.b5650c124e03c956a672.avif",
     "static/media/logo.svg": "/jatinfreelanceweb/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/jatinfreelanceweb/index.html",
-    "main.01259234.css.map": "/jatinfreelanceweb/static/css/main.01259234.css.map",
+    "main.6fcb609c.css.map": "/jatinfreelanceweb/static/css/main.6fcb609c.css.map",
     "main.e3d869f0.js.map": "/jatinfreelanceweb/static/js/main.e3d869f0.js.map",
     "787.6f5313be.chunk.js.map": "/jatinfreelanceweb/static/js/787.6f5313be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01259234.css",
+    "static/css/main.6fcb609c.css",
     "static/js/main.e3d869f0.js"
   ]
 }
