@@ -19,6 +19,7 @@ import {
 import emailjs from "@emailjs/browser";
 import { emailPassKeys } from "../utils/emailjsConfig";
 import { toast } from "react-toastify";
+import { Select, Slider, Space } from "antd";
 const Item = styled(Paper)(({ theme }) => ({
   //   backgroundColor: theme.palette.mode === "#fff",
   backgroundColor: "white",
@@ -31,11 +32,23 @@ export default function Contactus() {
   const [formData, setFormData] = useState({});
   const setChange = (val, key) => {
     setFormData({ ...formData, [key]: val });
+    // console.log(formData, "data");
+  };
+  const [currency, setCurrency] = useState(null);
+  const handleCurrency = (e, full) => {
+    setCurrency(full);
+    console.log(e, full, "set currency");
+  };
+  const formatter = (value) => {
+    if (currency?.label === "Dollar") return `${value}$`;
+    else if (currency?.label === "Rupees") return `${value}₹`;
+    else return `${value}$`;
   };
   const handleClick = async () => {
     try {
-      if (Object.entries(formData).length != 5)
+      if (Object.entries(formData).length != 6)
         return toast.error("Fill full form");
+      if (!formData.budget) return toast.error("Enter your Budget");
       let res = await emailjs.send(
         emailPassKeys.serviceId,
         emailPassKeys.templateId,
@@ -120,6 +133,48 @@ export default function Contactus() {
               type="text"
               onChange={(e) => setChange(e.target.value, "hereFrom")}
             />
+            <label>What's your budget?</label>
+            <div className="budgetRangeDiv">
+              <div className="budgetRange">
+                <Slider
+                  // style={{
+                  //   tracks: {
+                  //     background: "#bc93cf",
+                  //   },
+                  // }}
+                  defaultValue={currency?.label === "Rupees" ? 5000 : 5}
+                  min={currency?.label === "Rupees" ? 1000 : 5}
+                  max={currency?.label === "Rupees" ? 50000 : 5000}
+                  tooltip={{ formatter }}
+                  onChange={(e) =>
+                    setChange(
+                      `${e} ${currency?.value ? currency.value : "$"}`,
+                      "budget"
+                    )
+                  }
+                  step={10}
+                />
+              </div>
+
+              <Select
+                defaultValue="Dollar"
+                style={{
+                  width: 120,
+                }}
+                onChange={handleCurrency}
+                options={[
+                  {
+                    value: "$",
+                    label: "Dollar",
+                  },
+                  {
+                    value: "Rs",
+                    label: "Rupees",
+                  },
+                ]}
+              />
+            </div>
+
             <input
               placeholder="submit"
               type="button"

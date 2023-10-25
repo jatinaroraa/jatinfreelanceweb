@@ -7,6 +7,34 @@
   /* background: rgba(217, 217, 217, 0.24); */
   color: wheat;
 }
+.budgetRangeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 0px 5px;
+  border-radius: 10px;
+  margin: 10px 2px;
+}
+.ant-select-selector {
+  background-color: black !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+.ant-select-arrow {
+  color: white !important;
+}
+.ant-select-open {
+  color: white !important;
+}
+.budgetRange {
+  background-color: aliceblue;
+  padding: 0px 5px;
+  width: 100%;
+  margin: 5px 10px;
+  padding: 0px 10px;
+}
 .contactForm {
   display: flex;
   flex-direction: column;
