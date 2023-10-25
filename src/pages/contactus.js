@@ -20,6 +20,7 @@ import emailjs from "@emailjs/browser";
 import { emailPassKeys } from "../utils/emailjsConfig";
 import { toast } from "react-toastify";
 import { Select, Slider, Space } from "antd";
+import Heading from "../components/heading/Heading";
 const Item = styled(Paper)(({ theme }) => ({
   //   backgroundColor: theme.palette.mode === "#fff",
   backgroundColor: "white",
@@ -69,24 +70,28 @@ export default function Contactus() {
   };
   return (
     <Element id="contact">
-      <div>
-        <h1
-          style={{
-            textAlign: "center",
-            color: "white",
-            // fontSize: "26px",
-            // fontWeight: "600",
-          }}
-        >
-          Contactus
-        </h1>
+      <div
+        style={{
+          paddingTop: "20px",
+        }}
+      >
+        <Heading title="Contactus" />
 
         <div className="contactMainDiv">
           <div className="followDiv">
             <p className="followtitle">Follow us on:</p>
             <div className="iconDiv">
               <li>
-                <FaSquareInstagram size={30} />
+                <FaSquareInstagram
+                  size={30}
+                  onClick={() => {
+                    // console.log("click");
+                    return window.open(
+                      "https://www.instagram.com/mrfreelancedeveloper/",
+                      "_blank"
+                    );
+                  }}
+                />
               </li>
 
               <li>
@@ -133,7 +138,7 @@ export default function Contactus() {
               type="text"
               onChange={(e) => setChange(e.target.value, "hereFrom")}
             />
-            <label>What's your budget?</label>
+            <label>What's your per day/week budget?</label>
             <div className="budgetRangeDiv">
               <div className="budgetRange">
                 <Slider
@@ -143,8 +148,8 @@ export default function Contactus() {
                   //   },
                   // }}
                   defaultValue={currency?.label === "Rupees" ? 5000 : 5}
-                  min={currency?.label === "Rupees" ? 1000 : 5}
-                  max={currency?.label === "Rupees" ? 50000 : 5000}
+                  min={currency?.label === "Rupees" ? 2000 : 5}
+                  max={currency?.label === "Rupees" ? 500000 : 5000}
                   tooltip={{ formatter }}
                   onChange={(e) =>
                     setChange(
@@ -152,7 +157,7 @@ export default function Contactus() {
                       "budget"
                     )
                   }
-                  step={10}
+                  step={currency?.label === "Rupees" ? 1000 : 10}
                 />
               </div>
 

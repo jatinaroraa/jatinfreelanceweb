@@ -8,6 +8,7 @@
   /* background-color: #fff; */
   margin-top: -160px;
   border: 5px solid white;
+  object-fit: cover;
 }
 .mainDiv {
   border-radius: 20px;
