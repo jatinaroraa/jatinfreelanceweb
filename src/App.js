@@ -10,7 +10,8 @@ import { useEffect, useRef } from "react";
 import Aos from "aos";
 import { NavBar2 } from "./pages/Navbar2";
 import BrandsSlider from "./pages/brandsSlider";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const ref = useRef(null);
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
       <Projects />
       <Testimonials />
       <Contactus />
+      <ToastContainer />
     </div>
   );
 }

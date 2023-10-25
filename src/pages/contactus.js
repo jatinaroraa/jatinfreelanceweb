@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -16,6 +16,9 @@ import {
   scrollSpy,
   scroller,
 } from "react-scroll";
+import emailjs from "@emailjs/browser";
+import { emailPassKeys } from "../utils/emailjsConfig";
+import { toast } from "react-toastify";
 const Item = styled(Paper)(({ theme }) => ({
   //   backgroundColor: theme.palette.mode === "#fff",
   backgroundColor: "white",
@@ -25,6 +28,32 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 export default function Contactus() {
+  const [formData, setFormData] = useState({});
+  const setChange = (val, key) => {
+    setFormData({ ...formData, [key]: val });
+  };
+  const handleClick = async () => {
+    try {
+      if (Object.entries(formData).length != 5)
+        return toast.error("Fill full form");
+      let res = await emailjs.send(
+        emailPassKeys.serviceId,
+        emailPassKeys.templateId,
+        formData,
+        emailPassKeys.publicKey
+      );
+      console.log(res, "response");
+      if (res?.status != 200) {
+        return toast.error("something went wrong! please try agin");
+      }
+      setFormData({});
+
+      return toast.success("Thank You for Reaching out will contact you soon!");
+    } catch (error) {
+      console.log(error, "error ");
+      return toast.error("something went wrong! please try agin");
+    }
+  };
   return (
     <Element id="contact">
       <div>
@@ -58,24 +87,45 @@ export default function Contactus() {
 
           <div className="contactForm">
             <label>Enter your name</label>
-            <input placeholder="name" type="text" />
+            <input
+              placeholder="name"
+              type="text"
+              onChange={(e) => setChange(e.target.value, "fromName")}
+            />
             <label>Enter your email</label>
 
-            <input placeholder="email" type="email" />
+            <input
+              placeholder="email"
+              type="email"
+              onChange={(e) => setChange(e.target.value, "email")}
+            />
             <label>Enter your whatsapp number</label>
 
-            <input placeholder="Whatsapp Number" type="number" />
+            <input
+              placeholder="Whatsapp Number"
+              type="number"
+              onChange={(e) => setChange(e.target.value, "mobileNumber")}
+            />
             <label>What service do you need ?</label>
 
-            <input placeholder=" service you need" type="text" />
+            <input
+              placeholder=" service you need"
+              type="text"
+              onChange={(e) => setChange(e.target.value, "service")}
+            />
             <label>Where did you hear about me ?</label>
 
-            <input placeholder="Where did you hear about me ?" type="text" />
+            <input
+              placeholder="Where did you hear about me ?"
+              type="text"
+              onChange={(e) => setChange(e.target.value, "hereFrom")}
+            />
             <input
               placeholder="submit"
               type="button"
               className="buttonSubmit"
               value="Submit"
+              onClick={handleClick}
             />
           </div>
         </div>

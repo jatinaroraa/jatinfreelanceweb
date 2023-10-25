@@ -11,6 +11,7 @@ import {
   scrollSpy,
   scroller,
 } from "react-scroll";
+import { serviceList } from "../utils/servicesList";
 export default function Services() {
   return (
     <Element id="services">
@@ -38,8 +39,9 @@ export default function Services() {
           data-aos-duration="30000"
           className="serviceCardDiv"
         >
-          <ServiceCard />
-          <ServiceCard />
+          {serviceList.map((item) => {
+            return <ServiceCard data={item} />;
+          })}
         </div>
       </div>
     </Element>
