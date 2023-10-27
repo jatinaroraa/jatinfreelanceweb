@@ -27,7 +27,7 @@ export default function ServiceCard({ data }) {
           );
         })}
 
-        <p className="subHead">Benifits (free) </p>
+        <p className="subHead">Benefits (free) </p>
         {data.benifits.map((x) => {
           return (
             <li>
